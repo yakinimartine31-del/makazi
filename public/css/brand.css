@@ -1,0 +1,50 @@
+.aura-logo {
+    display: inline-block;
+    object-fit: contain;
+}
+
+.aura-logo--navbar {
+    width: 96px;
+    height: 68px;
+    vertical-align: middle;
+}
+
+.aura-logo--guest {
+    width: 190px;
+    height: 150px;
+}
+
+.aura-logo--dashboard {
+    width: 42px;
+    height: 42px;
+    margin: 0 .5rem 0 0 !important;
+    float: none !important;
+    opacity: 1 !important;
+}
+
+.aura-footer-logo {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.aura-logo--footer {
+    width: 130px;
+    height: 100px;
+}
+
+.aura-logo--component {
+    max-width: 100%;
+    height: auto;
+}
+
+.makazi-home-nav .navbar-brand.aura-brand::after {
+    content: none;
+}
+
+@media (max-width: 575.98px) {
+    .aura-logo--navbar {
+        width: 78px;
+        height: 58px;
+    }
+}

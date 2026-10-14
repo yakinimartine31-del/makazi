@@ -1,0 +1,1328 @@
+.makazi-home {
+    --makazi-ink: #171e2d;
+    --makazi-green: #4bbf70;
+    --makazi-muted: #9ba7b6;
+    background: #f4f6f5;
+    color: var(--makazi-ink);
+}
+
+.makazi-home-nav {
+    min-height: 84px;
+    padding: 0 max(5vw, calc((100vw - 1320px) / 2));
+    background: var(--makazi-ink) !important;
+}
+
+.makazi-home-nav .navbar-brand {
+    color: #fff;
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: -.06em;
+}
+
+.makazi-home-nav .navbar-brand::after {
+    content: ".";
+    color: var(--makazi-green);
+}
+
+.makazi-home-nav .nav-link {
+    color: #dce1e9 !important;
+    font-size: .9rem;
+    font-weight: 600;
+    padding: .8rem 1rem !important;
+}
+
+.makazi-home-nav .nav-link:hover,
+.makazi-home-nav .nav-link.active {
+    color: var(--makazi-green) !important;
+}
+
+.makazi-home-nav .navbar-toggler {
+    border-color: #596273;
+}
+
+.makazi-home-nav .makazi-post-link {
+    margin: 0 .65rem;
+    padding: .7rem 1.05rem !important;
+    border-radius: 5px;
+    background: var(--makazi-green);
+    color: #14251b !important;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.makazi-home-nav .makazi-post-link:hover {
+    background: #5dce80;
+    color: #14251b !important;
+}
+
+.makazi-home-main {
+    width: 100%;
+    max-width: none;
+    margin: 0 !important;
+    padding: 0;
+}
+
+.makazi-hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 70px max(7vw, calc((100vw - 1240px) / 2)) 64px;
+    background:
+        radial-gradient(ellipse at 76% 18%, rgba(85, 109, 124, .28), transparent 33%),
+        linear-gradient(112deg, #252c38 5%, #273039 49%, #3b4645 100%);
+}
+
+.makazi-hero::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    background: linear-gradient(90deg, rgba(17, 23, 35, .76), rgba(17, 23, 35, .25) 68%, rgba(17, 23, 35, .58));
+}
+
+.makazi-hero::after {
+    position: absolute;
+    z-index: -1;
+    right: -10%;
+    bottom: 12%;
+    width: 55%;
+    height: 38%;
+    content: "";
+    border-radius: 50%;
+    background: rgba(75, 191, 112, .12);
+    filter: blur(90px);
+}
+
+.makazi-city {
+    position: absolute;
+    z-index: -1;
+    inset: auto 0 0;
+    height: 78%;
+    opacity: .45;
+    overflow: hidden;
+}
+
+.makazi-city span {
+    position: absolute;
+    bottom: 0;
+    left: var(--left);
+    width: var(--width);
+    height: var(--height);
+    background-color: #111927;
+    background-image:
+        repeating-linear-gradient(90deg, transparent 0 13px, rgba(150, 177, 173, .16) 14px 17px, transparent 18px 29px),
+        repeating-linear-gradient(0deg, transparent 0 19px, rgba(150, 177, 173, .2) 20px 23px, transparent 24px 38px);
+    border: 1px solid rgba(255, 255, 255, .04);
+}
+
+.makazi-city span:nth-child(3n) {
+    clip-path: polygon(0 4%, 18% 4%, 18% 0, 38% 0, 38% 4%, 100% 4%, 100% 100%, 0 100%);
+}
+
+.makazi-city span:nth-child(3n + 1) {
+    background-color: #283443;
+}
+
+.makazi-hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 940px);
+    margin: 0 auto;
+    color: #fff;
+}
+
+.makazi-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #8cdaa2;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.makazi-hero h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(2.8rem, 6.2vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -.055em;
+    line-height: 1.08;
+}
+
+.makazi-hero h1 span {
+    text-decoration: underline;
+    text-decoration-color: var(--makazi-green);
+    text-decoration-thickness: 5px;
+    text-underline-offset: 9px;
+}
+
+.makazi-hero-content > p {
+    margin: 22px 0 32px;
+    color: #d0d5dc;
+    font-size: 1.1rem;
+}
+
+.makazi-search {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+    max-width: 910px;
+    padding: 12px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 20px 65px rgba(0, 0, 0, .23);
+}
+
+.makazi-search-location {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    min-height: 86px;
+    margin: 0;
+    padding: 12px 20px;
+    border: 1px solid #e9edf0;
+    border-radius: 12px;
+    background: #f8fafb;
+}
+
+.makazi-search-label {
+    margin-bottom: 5px;
+    color: #8d98a7;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.makazi-search-label i {
+    margin-right: 6px;
+    color: var(--makazi-green);
+}
+
+.makazi-search select {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--makazi-ink);
+    font-size: 1rem;
+}
+
+.makazi-search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 210px;
+    padding: 0 25px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--makazi-green);
+    color: #10251a;
+    font-size: 1rem;
+    font-weight: 800;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.makazi-search button:hover {
+    transform: translateY(-1px);
+    background: #5dce80;
+}
+
+.makazi-stats {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    margin-top: 33px;
+}
+
+.makazi-stat {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.makazi-stat-icon {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    border-radius: 12px;
+    background: #e1f5e6;
+    color: #358d51;
+    font-size: 1.35rem;
+}
+
+.makazi-stat strong,
+.makazi-stat small {
+    display: block;
+}
+
+.makazi-stat strong {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+.makazi-stat small {
+    margin-top: 3px;
+    color: #c4cbd3;
+    font-size: .82rem;
+}
+
+.makazi-stat-divider {
+    width: 1px;
+    height: 38px;
+    background: rgba(255, 255, 255, .24);
+}
+
+.makazi-hero-note {
+    position: absolute;
+    right: max(3vw, 25px);
+    bottom: 25px;
+    color: rgba(255, 255, 255, .45);
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    writing-mode: vertical-rl;
+}
+
+.makazi-home-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: min(100% - 40px, 1100px);
+    margin: 34px auto 42px;
+}
+
+.makazi-home-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 100px;
+    padding: 20px 24px;
+    border: 1px solid #e8ecea;
+    border-radius: 14px;
+    background: #fff;
+    color: var(--makazi-ink);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.makazi-home-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(23, 30, 45, .08);
+    color: var(--makazi-ink);
+    text-decoration: none;
+}
+
+.makazi-home-link-icon {
+    display: grid;
+    flex: 0 0 48px;
+    height: 48px;
+    place-items: center;
+    border-radius: 12px;
+    background: #e8f7ec;
+    color: #358d51;
+    font-size: 1.2rem;
+}
+
+.makazi-home-link strong,
+.makazi-home-link small {
+    display: block;
+}
+
+.makazi-home-link strong {
+    font-size: .98rem;
+}
+
+.makazi-home-link small {
+    margin-top: 4px;
+    color: #778292;
+}
+
+.makazi-home-link > .bi-arrow-up-right {
+    margin-left: auto;
+    color: #829090;
+}
+
+.makazi-home-footer {
+    margin-top: 0 !important;
+    padding: 0 !important;
+    background: #171e2d !important;
+    color: #cbd2dc;
+}
+
+.makazi-footer-content {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 45px;
+    width: min(100% - 48px, 1200px);
+    margin: 0 auto;
+    padding: 54px 0 45px;
+}
+
+.makazi-footer-brand {
+    max-width: 300px;
+}
+
+.makazi-footer-logo {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -.06em;
+}
+
+.makazi-footer-logo span {
+    color: var(--makazi-green);
+}
+
+.makazi-footer-logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.makazi-footer-brand p {
+    margin-top: 14px;
+    color: #aab3c0;
+    line-height: 1.7;
+}
+
+.makazi-footer-content h2 {
+    margin: 5px 0 18px;
+    color: #fff;
+    font-size: .91rem;
+    font-weight: 700;
+}
+
+.makazi-footer-content > div:not(:first-child) a {
+    display: block;
+    margin: 11px 0;
+    color: #b7c0cc;
+    font-size: .88rem;
+}
+
+.makazi-footer-content > div:not(:first-child) a:hover {
+    color: var(--makazi-green);
+    text-decoration: none;
+}
+
+.makazi-footer-bottom {
+    padding: 18px 24px;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    color: #aab3c0;
+    font-size: .82rem;
+    text-align: center;
+}
+
+.makazi-home-content {
+    width: min(100% - 48px, 1200px);
+    margin: 0 auto;
+}
+
+.makazi-category-strip {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin: 0 -24px;
+    padding: 24px;
+    border-bottom: 1px solid #e6ebe8;
+    scrollbar-width: thin;
+}
+
+.makazi-category-chip {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 16px;
+    border: 1px solid #e4e9e6;
+    border-radius: 99px;
+    background: #fff;
+    color: #374354;
+    font-size: .87rem;
+    font-weight: 600;
+}
+
+.makazi-category-chip:first-child,
+.makazi-category-chip:hover {
+    border-color: #ccebd5;
+    background: #eaf7ee;
+    color: #2e8248;
+    text-decoration: none;
+}
+
+.aura-home-filter-form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin: 0 0 26px;
+    padding: 20px;
+    border: 1px solid #e6ebe8;
+    border-radius: 13px;
+    background: #fff;
+}
+
+.aura-home-filter-form > div {
+    min-width: 0;
+}
+
+.aura-home-filter-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #475467;
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.aura-home-installment-filter {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+}
+
+.aura-home-filter-form > button {
+    align-self: end;
+    min-height: 38px;
+}
+
+.makazi-section {
+    margin: 0;
+    padding: 64px 0;
+    border-bottom: 1px solid #e6ebe8;
+}
+
+.makazi-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.makazi-section-kicker {
+    display: block;
+    margin-bottom: 8px;
+    color: #3f9e5b;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+
+.makazi-section-heading h2,
+.makazi-owner-copy h2 {
+    margin: 0;
+    color: #1b2432;
+    font-size: clamp(1.55rem, 3vw, 2.05rem);
+    font-weight: 750;
+    letter-spacing: -.04em;
+}
+
+.makazi-section-heading p {
+    margin: 8px 0 0;
+    color: #778292;
+    font-size: .95rem;
+}
+
+.makazi-text-link {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 8px;
+    color: #338c4f;
+    font-size: .87rem;
+    font-weight: 700;
+}
+
+.makazi-text-link:hover {
+    color: #216f39;
+    text-decoration: none;
+}
+
+.makazi-listing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.makazi-listing-card {
+    overflow: hidden;
+    border: 1px solid #e6ebe8;
+    border-radius: 13px;
+    background: #fff;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.makazi-listing-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(23, 30, 45, .09);
+}
+
+.makazi-listing-image {
+    position: relative;
+    display: grid;
+    height: 190px;
+    overflow: hidden;
+    place-items: center;
+    background: linear-gradient(140deg, #dfece4, #b7cebf);
+}
+
+.makazi-listing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .35s ease;
+}
+
+.makazi-listing-card:hover .makazi-listing-image img {
+    transform: scale(1.035);
+}
+
+.makazi-listing-placeholder {
+    color: rgba(45, 103, 65, .5);
+    font-size: 3rem;
+}
+
+.makazi-listing-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 10px;
+    border-radius: 99px;
+    background: #e9f7ec;
+    color: #2b7d43;
+    font-size: .68rem;
+    font-weight: 800;
+}
+
+.makazi-listing-info {
+    padding: 17px;
+}
+
+.makazi-listing-location {
+    display: block;
+    overflow: hidden;
+    color: #748091;
+    font-size: .75rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.makazi-listing-location i {
+    color: #45a361;
+}
+
+.makazi-listing-info h3 {
+    display: -webkit-box;
+    min-height: 43px;
+    overflow: hidden;
+    margin: 10px 0;
+    font-size: .98rem;
+    font-weight: 700;
+    line-height: 1.4;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.makazi-listing-info h3 a {
+    color: #1c2735;
+}
+
+.makazi-listing-info h3 a:hover {
+    color: #338c4f;
+    text-decoration: none;
+}
+
+.makazi-listing-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    min-height: 23px;
+    color: #748091;
+    font-size: .72rem;
+}
+
+.makazi-listing-price {
+    margin-top: 14px;
+    color: #287d43;
+    font-size: 1.08rem;
+    font-weight: 800;
+}
+
+.makazi-listing-price small {
+    color: #7f8996;
+    font-size: .73rem;
+    font-weight: 500;
+}
+
+.makazi-listing-view {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #edf0ee;
+    color: #374354;
+    font-size: .77rem;
+    font-weight: 700;
+}
+
+.makazi-listing-view:hover {
+    color: #338c4f;
+    text-decoration: none;
+}
+
+.makazi-empty-state {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 26px;
+    border: 1px dashed #cbd8cf;
+    border-radius: 13px;
+    background: #fff;
+}
+
+.makazi-empty-state > span {
+    display: grid;
+    flex: 0 0 52px;
+    height: 52px;
+    place-items: center;
+    border-radius: 13px;
+    background: #eaf7ee;
+    color: #368d50;
+    font-size: 1.4rem;
+}
+
+.makazi-empty-state strong {
+    color: #253144;
+}
+
+.makazi-empty-state p {
+    margin: 5px 0 0;
+    color: #7c8794;
+    font-size: .87rem;
+}
+
+.makazi-empty-state > a {
+    flex: 0 0 auto;
+    margin-left: auto;
+    padding: 11px 15px;
+    border-radius: 7px;
+    background: #4bbf70;
+    color: #10251a;
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.makazi-empty-state > a:hover {
+    background: #5dce80;
+    text-decoration: none;
+}
+
+.makazi-empty-note {
+    padding: 28px;
+    border: 1px solid #e6ebe8;
+    border-radius: 12px;
+    background: #fff;
+    color: #778292;
+    text-align: center;
+}
+
+.makazi-popular-searches {
+    padding-right: max(24px, calc((100vw - 1200px) / 2));
+    padding-left: max(24px, calc((100vw - 1200px) / 2));
+    margin-right: calc((min(100vw - 48px, 1200px) - 100vw) / 2);
+    margin-left: calc((min(100vw - 48px, 1200px) - 100vw) / 2);
+    background: #edf4ef;
+}
+
+.makazi-search-shortcuts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.makazi-shortcut-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 78px;
+    padding: 14px;
+    border: 1px solid #e3ebe5;
+    border-radius: 11px;
+    background: #fff;
+    color: #253144;
+}
+
+.makazi-shortcut-card:hover {
+    border-color: #b7dfc1;
+    color: #287d43;
+    text-decoration: none;
+}
+
+.makazi-shortcut-icon {
+    display: grid;
+    flex: 0 0 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 11px;
+    background: #eaf7ee;
+    color: #368d50;
+}
+
+.makazi-shortcut-card strong {
+    font-size: .87rem;
+}
+
+.makazi-shortcut-card small {
+    margin-left: auto;
+    color: #83908b;
+    font-size: .69rem;
+}
+
+.makazi-region-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.makazi-region-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 78px;
+    padding: 14px;
+    border: 1px solid #e6ebe8;
+    border-radius: 11px;
+    background: #fff;
+    color: #253144;
+}
+
+.makazi-region-card:hover {
+    border-color: #b7dfc1;
+    color: #287d43;
+    text-decoration: none;
+}
+
+.makazi-region-icon {
+    display: grid;
+    flex: 0 0 40px;
+    height: 40px;
+    place-items: center;
+    border-radius: 11px;
+    background: #eff6f1;
+    color: #40975a;
+}
+
+.makazi-region-card strong,
+.makazi-region-card small {
+    display: block;
+}
+
+.makazi-region-card strong {
+    font-size: .87rem;
+}
+
+.makazi-region-card small {
+    margin-top: 4px;
+    color: #87918f;
+    font-size: .71rem;
+}
+
+.makazi-region-card > .bi-arrow-up-right {
+    margin-left: auto;
+    color: #9aa59f;
+}
+
+.makazi-owner-band {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 45px;
+    overflow: hidden;
+    margin: 62px 0;
+    padding: 44px;
+    border-radius: 17px;
+    background: #192131;
+    color: #fff;
+}
+
+.makazi-owner-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.makazi-owner-copy h2 {
+    max-width: 420px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.makazi-owner-copy p {
+    max-width: 440px;
+    margin: 13px 0 24px;
+    color: #c2cbd4;
+    line-height: 1.65;
+}
+
+.makazi-owner-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 17px;
+    border-radius: 7px;
+    background: #4bbf70;
+    color: #10251a;
+    font-size: .85rem;
+    font-weight: 800;
+}
+
+.makazi-owner-button:hover {
+    background: #5dce80;
+    color: #10251a;
+    text-decoration: none;
+}
+
+.makazi-owner-art {
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    color: rgba(75, 191, 112, .12);
+    font-size: 13rem;
+    line-height: 1;
+}
+
+.makazi-owner-list {
+    position: relative;
+    z-index: 1;
+    padding: 21px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .06);
+}
+
+.makazi-owner-list h3 {
+    margin: 0 0 14px;
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.makazi-owner-row {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+.makazi-owner-avatar {
+    display: grid;
+    flex: 0 0 37px;
+    height: 37px;
+    place-items: center;
+    border-radius: 50%;
+    background: #dff4e4;
+    color: #33834b;
+    font-weight: 800;
+}
+
+.makazi-owner-row strong,
+.makazi-owner-row small {
+    display: block;
+}
+
+.makazi-owner-row strong {
+    color: #fff;
+    font-size: .81rem;
+}
+
+.makazi-owner-row small,
+.makazi-owner-empty {
+    margin-top: 3px;
+    color: #c2cbd4;
+    font-size: .72rem;
+}
+
+.makazi-rent-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #e6ebe8;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.makazi-rent-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #354052;
+    font-size: .85rem;
+}
+
+.makazi-rent-table th,
+.makazi-rent-table td {
+    padding: 16px 19px;
+    border-bottom: 1px solid #edf0ee;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.makazi-rent-table th {
+    background: #f8faf9;
+    color: #7b8793;
+    font-size: .7rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.makazi-rent-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.makazi-rent-table td strong,
+.makazi-rent-table td small {
+    display: block;
+}
+
+.makazi-rent-table td small {
+    margin-top: 4px;
+    color: #8a959f;
+    font-size: .69rem;
+}
+
+.makazi-rent-table td a {
+    color: #32884c;
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.makazi-how-section {
+    margin: 0 calc((min(100vw - 48px, 1200px) - 100vw) / 2);
+    padding: 62px max(24px, calc((100vw - 1200px) / 2));
+    background: #edf4ef;
+}
+
+.makazi-centered-heading {
+    justify-content: center;
+    text-align: center;
+}
+
+.makazi-how-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 31px;
+}
+
+.makazi-how-card {
+    position: relative;
+    min-height: 205px;
+    padding: 22px;
+    border: 1px solid #e2ebe4;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.makazi-how-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    color: #dce9df;
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.makazi-how-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    place-items: center;
+    border-radius: 12px;
+    background: #e8f7ec;
+    color: #388e52;
+    font-size: 1.22rem;
+}
+
+.makazi-how-card h3 {
+    margin: 0 0 8px;
+    color: #263244;
+    font-size: .94rem;
+    font-weight: 750;
+}
+
+.makazi-how-card p {
+    margin: 0;
+    color: #7a8692;
+    font-size: .8rem;
+    line-height: 1.6;
+}
+
+.makazi-faq-section {
+    border-bottom: 0;
+}
+
+.makazi-faq-list {
+    max-width: 850px;
+    margin: 30px auto 0;
+    border-top: 1px solid #e2e8e4;
+}
+
+.makazi-faq-list details {
+    border-bottom: 1px solid #e2e8e4;
+}
+
+.makazi-faq-list summary {
+    position: relative;
+    padding: 19px 42px 19px 3px;
+    color: #273344;
+    cursor: pointer;
+    font-size: .94rem;
+    font-weight: 700;
+    list-style: none;
+}
+
+.makazi-faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.makazi-faq-list summary::after {
+    position: absolute;
+    top: 17px;
+    right: 5px;
+    content: "+";
+    color: #3b9857;
+    font-size: 1.35rem;
+    font-weight: 400;
+}
+
+.makazi-faq-list details[open] summary::after {
+    content: "−";
+}
+
+.makazi-faq-list details p {
+    max-width: 760px;
+    margin: -3px 0 20px;
+    color: #748091;
+    font-size: .87rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 767.98px) {
+    .makazi-home-nav {
+        min-height: 70px;
+        padding: 0 18px;
+    }
+
+    .makazi-home-nav .navbar-collapse {
+        padding: 10px 0 16px;
+    }
+
+    .makazi-home-nav .nav-link {
+        padding: .55rem .25rem !important;
+    }
+
+    .makazi-hero {
+        min-height: 630px;
+        padding: 64px 22px 55px;
+    }
+
+    .makazi-hero h1 {
+        font-size: clamp(2.6rem, 11vw, 4rem);
+    }
+
+    .makazi-hero-content > p {
+        max-width: 360px;
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .makazi-search {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .makazi-search-location {
+        min-height: 76px;
+    }
+
+    .makazi-search button {
+        min-height: 60px;
+    }
+
+    .makazi-stats {
+        gap: 13px;
+        margin-top: 25px;
+    }
+
+    .makazi-stat {
+        gap: 9px;
+    }
+
+    .makazi-stat-icon {
+        width: 43px;
+        height: 43px;
+    }
+
+    .makazi-stat strong {
+        font-size: 1.05rem;
+    }
+
+    .makazi-stat small {
+        max-width: 115px;
+        font-size: .7rem;
+    }
+
+    .makazi-home-links {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 22px auto 30px;
+    }
+
+    .makazi-home-link {
+        min-height: 84px;
+        padding: 16px;
+    }
+
+    .makazi-home-content {
+        width: min(100% - 32px, 1200px);
+    }
+
+    .aura-home-filter-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aura-home-filter-form {
+        grid-template-columns: 1fr;
+    }
+
+    .makazi-category-strip {
+        margin: 0 -16px;
+        padding: 18px 16px;
+    }
+
+    .makazi-section {
+        padding: 43px 0;
+    }
+
+    .makazi-section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .makazi-listing-grid,
+    .makazi-region-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+    }
+
+    .makazi-listing-image {
+        height: 145px;
+    }
+
+    .makazi-listing-info {
+        padding: 13px;
+    }
+
+    .makazi-listing-info h3 {
+        min-height: 60px;
+        font-size: .88rem;
+    }
+
+    .makazi-listing-meta {
+        gap: 7px;
+        font-size: .67rem;
+    }
+
+    .makazi-listing-price {
+        font-size: .94rem;
+    }
+
+    .makazi-search-shortcuts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .makazi-popular-searches {
+        margin-right: -16px;
+        margin-left: -16px;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .makazi-shortcut-card {
+        align-items: start;
+        flex-direction: column;
+        gap: 9px;
+        padding: 12px;
+    }
+
+    .makazi-shortcut-card small {
+        margin-left: 0;
+    }
+
+    .makazi-owner-band {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 38px 0;
+        padding: 27px 20px;
+    }
+
+    .makazi-owner-copy h2 {
+        font-size: 1.65rem;
+    }
+
+    .makazi-owner-list {
+        padding: 17px;
+    }
+
+    .makazi-rent-table th,
+    .makazi-rent-table td {
+        padding: 13px;
+    }
+
+    .makazi-how-section {
+        margin-right: -16px;
+        margin-left: -16px;
+        padding: 43px 16px;
+    }
+
+    .makazi-how-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .makazi-how-card {
+        min-height: 220px;
+        padding: 16px;
+    }
+
+    .makazi-empty-state {
+        align-items: start;
+        flex-wrap: wrap;
+        padding: 18px;
+    }
+
+    .makazi-empty-state > div {
+        flex: 1 1 calc(100% - 75px);
+    }
+
+    .makazi-empty-state > a {
+        margin-left: 70px;
+    }
+
+    .makazi-footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        width: min(100% - 36px, 1200px);
+        padding: 38px 0 30px;
+    }
+
+    .makazi-footer-brand {
+        grid-column: 1 / -1;
+    }
+}

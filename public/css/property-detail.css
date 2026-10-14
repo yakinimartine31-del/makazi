@@ -1,0 +1,734 @@
+.aura-property-page {
+    max-width: 1180px;
+    margin: 0 auto;
+    color: #172033;
+}
+
+.aura-property-dialog {
+    width: min(1280px, calc(100vw - 32px));
+    max-width: none;
+    max-height: 92vh;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 24px 80px rgba(13, 22, 36, .3);
+}
+
+.aura-property-dialog::backdrop {
+    background: rgba(14, 22, 35, .66);
+    backdrop-filter: blur(2px);
+}
+
+.aura-property-dialog-header {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    min-height: 56px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18px;
+    border-bottom: 1px solid #e7ebf0;
+    background: #fff;
+    color: #263246;
+    font-weight: 700;
+}
+
+.aura-property-dialog-close {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: #f0f2f5;
+    color: #263246;
+    cursor: pointer;
+}
+
+.aura-property-dialog-close:hover {
+    background: #e3e8ed;
+}
+
+.aura-property-dialog-content {
+    max-height: calc(92vh - 56px);
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.aura-property-dialog-content .aura-property-page {
+    max-width: none;
+}
+
+.aura-property-dialog-message {
+    margin: 24px auto;
+    color: #536174;
+    text-align: center;
+}
+
+.aura-property-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 24px;
+    color: #687386;
+    font-size: .9rem;
+}
+
+.aura-property-breadcrumb a {
+    color: #536174;
+}
+
+.aura-property-breadcrumb a:hover {
+    color: #338c4f;
+    text-decoration: none;
+}
+
+.aura-property-breadcrumb i {
+    color: #a4adba;
+    font-size: .7rem;
+}
+
+.aura-property-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(260px, .9fr);
+    align-items: start;
+    gap: 28px;
+}
+
+.aura-property-main {
+    min-width: 0;
+}
+
+.aura-property-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.aura-property-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.aura-property-heading h1 {
+    margin: 0 0 7px;
+    color: #151c2c;
+    font-size: clamp(1.65rem, 3vw, 2.5rem);
+    font-weight: 750;
+    line-height: 1.16;
+}
+
+.aura-property-reference {
+    margin: 0;
+    color: #778194;
+    font-size: .9rem;
+}
+
+.aura-property-status {
+    flex: 0 0 auto;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #e9f5ed;
+    color: #287743;
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.aura-property-like {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 6px 10px;
+    border: 1px solid #e3e8e5;
+    border-radius: 999px;
+    background: #fff;
+    color: #68766f;
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.aura-property-like:hover,
+.aura-property-like.is-liked {
+    border-color: #f1d6dc;
+    background: #fff4f6;
+    color: #c33c58;
+}
+
+.aura-property-like:disabled {
+    cursor: wait;
+    opacity: .7;
+}
+
+.aura-property-gallery {
+    overflow: hidden;
+    border-radius: 16px;
+    background: #edf1f5;
+}
+
+.aura-gallery-stage {
+    position: relative;
+    display: grid;
+    min-height: 280px;
+    height: clamp(300px, 42vw, 520px);
+    place-items: center;
+    background: #e9edf2;
+}
+
+.aura-gallery-current {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.aura-gallery-arrow {
+    position: absolute;
+    top: 50%;
+    display: grid;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    transform: translateY(-50%);
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .94);
+    color: #172033;
+    font-size: 1.25rem;
+    box-shadow: 0 3px 12px rgba(14, 26, 44, .16);
+}
+
+.aura-gallery-arrow:hover {
+    background: #fff;
+}
+
+.aura-gallery-arrow--previous {
+    left: 14px;
+}
+
+.aura-gallery-arrow--next {
+    right: 14px;
+}
+
+.aura-gallery-count {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(18, 27, 41, .74);
+    color: #fff;
+    font-size: .8rem;
+}
+
+.aura-gallery-thumbnails {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 12px;
+    background: #fff;
+}
+
+.aura-gallery-thumbnail {
+    flex: 0 0 88px;
+    width: 88px;
+    height: 64px;
+    overflow: hidden;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: #edf1f5;
+}
+
+.aura-gallery-thumbnail.is-active {
+    border-color: #338c4f;
+}
+
+.aura-gallery-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aura-gallery-empty {
+    display: grid;
+    min-height: 320px;
+    place-content: center;
+    justify-items: center;
+    gap: 10px;
+    color: #778194;
+}
+
+.aura-gallery-empty i {
+    color: #9aa5b4;
+    font-size: 3rem;
+}
+
+.aura-property-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 2px;
+    border-bottom: 1px solid #e7ebf0;
+}
+
+.aura-property-location,
+.aura-property-date {
+    display: block;
+}
+
+.aura-property-location {
+    color: #344154;
+    font-weight: 650;
+}
+
+.aura-property-location i {
+    margin-right: 4px;
+    color: #398b50;
+}
+
+.aura-property-location span {
+    color: #6c7788;
+    font-weight: 400;
+}
+
+.aura-property-date {
+    margin-top: 5px;
+    color: #778194;
+    font-size: .87rem;
+}
+
+.aura-property-price {
+    flex: 0 0 auto;
+    margin: 0;
+    color: #287743;
+    font-size: clamp(1.25rem, 2vw, 1.8rem);
+    font-weight: 750;
+    text-align: right;
+}
+
+.aura-property-price span {
+    color: #687386;
+    font-size: .88rem;
+    font-weight: 500;
+}
+
+.aura-property-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0;
+    overflow: hidden;
+    margin: 20px 0;
+    border: 1px solid #e7ebf0;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.aura-property-facts > div {
+    display: flex;
+    min-height: 76px;
+    align-items: center;
+    gap: 11px;
+    padding: 12px;
+    border-right: 1px solid #e7ebf0;
+    border-bottom: 1px solid #e7ebf0;
+    background: #fff;
+}
+
+.aura-property-facts > div > i {
+    color: #398b50;
+    font-size: 1.25rem;
+}
+
+.aura-property-facts small,
+.aura-property-facts strong {
+    display: block;
+}
+
+.aura-property-facts small {
+    margin-bottom: 3px;
+    color: #778194;
+    font-size: .78rem;
+}
+
+.aura-property-facts strong {
+    color: #263246;
+    font-size: .92rem;
+}
+
+.aura-property-section {
+    margin-top: 22px;
+    padding: 22px;
+    border: 1px solid #e7ebf0;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.aura-property-section h2 {
+    margin: 0 0 17px;
+    color: #1c2738;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.aura-property-section h3 {
+    margin: 20px 0 8px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.aura-property-amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.aura-property-amenities span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #f2f7f3;
+    color: #344154;
+    font-size: .9rem;
+}
+
+.aura-property-amenities i {
+    color: #338c4f;
+}
+
+.aura-description-copy {
+    color: #4e5b6d;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+.aura-property-location-card p {
+    color: #4e5b6d;
+}
+
+.aura-property-location-card p i {
+    margin-right: 5px;
+    color: #398b50;
+}
+
+.aura-property-map {
+    height: 300px;
+    overflow: hidden;
+    margin-top: 18px;
+    border: 1px solid #e2e8ee;
+    border-radius: 10px;
+    background: #edf1f5;
+}
+
+.aura-property-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.aura-map-directions {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 13px;
+    color: #338c4f;
+    font-weight: 700;
+}
+
+.aura-map-directions:hover {
+    color: #287743;
+    text-decoration: none;
+}
+
+.aura-contact-card {
+    position: sticky;
+    top: 22px;
+    overflow: hidden;
+    border: 1px solid #e3e8ed;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(24, 38, 56, .06);
+}
+
+.aura-contact-owner {
+    padding: 28px 22px 22px;
+    text-align: center;
+}
+
+.aura-owner-avatar {
+    display: grid;
+    width: 94px;
+    height: 94px;
+    margin: 0 auto 15px;
+    place-items: center;
+    border: 5px solid #edf5ef;
+    border-radius: 50%;
+    background: #398b50;
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.aura-contact-owner h2 {
+    margin: 0 0 4px;
+    color: #1c2738;
+    font-size: 1.2rem;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+
+.aura-contact-owner p {
+    margin: 0;
+    color: #778194;
+}
+
+.aura-owner-email {
+    display: inline-block;
+    margin-top: 8px;
+    color: #687386;
+    font-size: .84rem;
+    overflow-wrap: anywhere;
+}
+
+.aura-contact-actions {
+    display: grid;
+    gap: 10px;
+    margin: 0 20px;
+    padding: 20px 0;
+    border-top: 1px solid #e7ebf0;
+}
+
+.aura-contact-reveal summary,
+.aura-contact-whatsapp,
+.aura-contact-browse {
+    display: flex;
+    min-height: 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 14px;
+    border: 1px solid #398b50;
+    border-radius: 9px;
+    background: #398b50;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+
+.aura-contact-reveal summary {
+    list-style: none;
+}
+
+.aura-contact-reveal summary::-webkit-details-marker {
+    display: none;
+}
+
+.aura-contact-reveal[open] summary {
+    border-radius: 9px 9px 0 0;
+}
+
+.aura-contact-reveal > a {
+    display: block;
+    padding: 12px;
+    border: 1px solid #398b50;
+    border-top: 0;
+    border-radius: 0 0 9px 9px;
+    color: #287743;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.aura-contact-whatsapp {
+    border-color: #348a74;
+    background: #348a74;
+    color: #fff;
+}
+
+.aura-contact-browse {
+    border-color: #d8dee6;
+    background: #fff;
+    color: #39465a;
+}
+
+.aura-contact-reveal summary:hover,
+.aura-contact-whatsapp:hover,
+.aura-contact-browse:hover {
+    color: #fff;
+    text-decoration: none;
+    filter: brightness(.96);
+}
+
+.aura-contact-browse:hover {
+    color: #263246;
+}
+
+.aura-contact-safety {
+    margin: 0;
+    padding: 0 20px 20px;
+    color: #778194;
+    font-size: .82rem;
+    line-height: 1.5;
+}
+
+.aura-contact-safety i {
+    color: #398b50;
+}
+
+.aura-related-listings {
+    margin-top: 54px;
+}
+
+.aura-related-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.aura-related-heading > div > span {
+    color: #398b50;
+    font-size: .83rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.aura-related-heading h2 {
+    margin: 4px 0 0;
+    color: #1c2738;
+    font-size: 1.45rem;
+    font-weight: 750;
+}
+
+.aura-related-heading > a {
+    flex: 0 0 auto;
+    color: #338c4f;
+    font-weight: 700;
+}
+
+.aura-related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.aura-related-card {
+    display: flex;
+    min-width: 0;
+    overflow: hidden;
+    flex-direction: column;
+    border: 1px solid #e5eaf0;
+    border-radius: 12px;
+    background: #fff;
+    color: inherit;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.aura-related-card:hover {
+    transform: translateY(-3px);
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 8px 22px rgba(24, 38, 56, .1);
+}
+
+.aura-related-card > img,
+.aura-related-placeholder {
+    display: grid;
+    width: 100%;
+    height: 155px;
+    place-items: center;
+    object-fit: cover;
+    background: #edf1f5;
+    color: #9aa5b4;
+    font-size: 2rem;
+}
+
+.aura-related-card-content {
+    display: grid;
+    gap: 7px;
+    padding: 13px;
+}
+
+.aura-related-location {
+    color: #778194;
+    font-size: .8rem;
+}
+
+.aura-related-card-content strong {
+    display: -webkit-box;
+    overflow: hidden;
+    color: #263246;
+    font-size: .96rem;
+    line-height: 1.35;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.aura-related-price {
+    color: #287743;
+    font-weight: 750;
+}
+
+@media (max-width: 767.98px) {
+    .aura-property-columns {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .aura-contact-card {
+        position: static;
+        grid-row: 2;
+    }
+
+    .aura-gallery-stage {
+        height: 62vw;
+        min-height: 240px;
+    }
+
+    .aura-property-map {
+        height: 240px;
+    }
+
+    .aura-property-heading {
+        flex-direction: column-reverse;
+        gap: 9px;
+    }
+
+    .aura-property-summary {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .aura-property-price {
+        text-align: left;
+    }
+
+    .aura-related-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 420px) {
+    .aura-related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aura-related-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
